@@ -22,6 +22,8 @@ import com.google.android.material.textfield.TextInputEditText;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -115,11 +117,8 @@ public class FileViewerAdapter extends RecyclerView.Adapter<FileViewerAdapter.Re
     }
 
     private boolean presentFileOptions(@NonNull final RecordingsViewHolder holder) {
-        final ArrayList<String> entries = new ArrayList<>();
-        entries.add(mContext.getString(R.string.dialog_file_share));
-        entries.add(mContext.getString(R.string.dialog_file_rename));
-        entries.add(mContext.getString(R.string.dialog_file_delete));
-
+        final List<String> entries = Arrays.asList(mContext.getString(R.string.dialog_file_share),
+                mContext.getString(R.string.dialog_file_rename), mContext.getString(R.string.dialog_file_delete));
         final CharSequence[] items = entries.toArray(new CharSequence[entries.size()]);
 
 
@@ -193,8 +192,9 @@ public class FileViewerAdapter extends RecyclerView.Adapter<FileViewerAdapter.Re
     @Override
     public void onNewDatabaseEntryAdded() {
         //item added to top of the list
-        notifyItemInserted(getItemCount() - 1);
-        llm.scrollToPosition(getItemCount() - 1);
+        int position = getItemCount() - 1;
+        notifyItemInserted(position);
+        llm.scrollToPosition(position);
     }
 
     @Override
@@ -207,11 +207,12 @@ public class FileViewerAdapter extends RecyclerView.Adapter<FileViewerAdapter.Re
         //remove item from database, recyclerview and storage
 
         //delete file from storage
-        File file = new File(getItem(position).getFilePath());
+        RecordingItem recordingItem = getItem(position);
+        File file = new File(recordingItem.getFilePath());
         if (!file.delete()) {
             Toast.makeText(mContext,
                     String.format(mContext.getString(R.string.toast_file_delete_failed),
-                            getItem(position).getName()),
+                            recordingItem.getName()),
                     Toast.LENGTH_LONG).show();
             return;
         }
@@ -220,12 +221,12 @@ public class FileViewerAdapter extends RecyclerView.Adapter<FileViewerAdapter.Re
                 mContext,
                 String.format(
                         mContext.getString(R.string.toast_file_delete),
-                        getItem(position).getName()
+                        recordingItem.getName()
                 ),
                 Toast.LENGTH_SHORT
         ).show();
 
-        mDatabase.removeItemWithId(getItem(position).getId());
+        mDatabase.removeItemWithId(recordingItem.getId());
         notifyItemRemoved(position);
     }
 
@@ -250,14 +251,15 @@ public class FileViewerAdapter extends RecyclerView.Adapter<FileViewerAdapter.Re
                     Toast.LENGTH_LONG).show();
         } else {
             //file name is unique, rename file
-            File oldFilePath = new File(getItem(position).getFilePath());
+            RecordingItem recordingItem = getItem(position);
+            File oldFilePath = new File(recordingItem.getFilePath());
             if (!oldFilePath.renameTo(f)) {
                 Toast.makeText(mContext,
                         String.format(mContext.getString(R.string.toast_file_rename_failed), name),
                         Toast.LENGTH_LONG).show();
                 return;
             }
-            mDatabase.renameItem(getItem(position), name, mFilePath);
+            mDatabase.renameItem(recordingItem, name, mFilePath);
             notifyItemChanged(position);
         }
     }
