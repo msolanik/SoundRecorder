@@ -37,9 +37,9 @@ import by.naxa.soundrecorder.RecordingItem;
 import by.naxa.soundrecorder.fragments.PlaybackFragment;
 import by.naxa.soundrecorder.listeners.OnDatabaseChangedListener;
 import by.naxa.soundrecorder.listeners.OnSingleClickListener;
-import by.naxa.soundrecorder.util.EventBroadcaster;
-import by.naxa.soundrecorder.util.Paths;
-import by.naxa.soundrecorder.util.TimeUtils;
+import by.naxa.soundrecorder.utils.util.EventBroadcaster;
+import by.naxa.soundrecorder.utils.util.Paths;
+import by.naxa.soundrecorder.utils.util.TimeUtils;
 import io.fabric.sdk.android.Fabric;
 
 /**

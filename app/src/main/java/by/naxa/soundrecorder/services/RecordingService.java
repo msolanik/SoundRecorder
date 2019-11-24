@@ -32,12 +32,12 @@ import java.util.NoSuchElementException;
 import by.naxa.soundrecorder.DBHelper;
 import by.naxa.soundrecorder.R;
 import by.naxa.soundrecorder.RecorderState;
-import by.naxa.soundrecorder.util.Command;
-import by.naxa.soundrecorder.util.EventBroadcaster;
-import by.naxa.soundrecorder.util.MyIntentBuilder;
-import by.naxa.soundrecorder.util.MySharedPreferences;
-import by.naxa.soundrecorder.util.NotificationCompatPie;
-import by.naxa.soundrecorder.util.Paths;
+import by.naxa.soundrecorder.utils.util.Command;
+import by.naxa.soundrecorder.utils.util.EventBroadcaster;
+import by.naxa.soundrecorder.utils.util.MyIntentBuilder;
+import by.naxa.soundrecorder.utils.util.MySharedPreferences;
+import by.naxa.soundrecorder.utils.util.NotificationCompatPie;
+import by.naxa.soundrecorder.utils.util.Paths;
 import io.fabric.sdk.android.Fabric;
 
 /**

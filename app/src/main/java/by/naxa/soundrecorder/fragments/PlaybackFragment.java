@@ -32,10 +32,10 @@ import by.naxa.soundrecorder.R;
 import by.naxa.soundrecorder.RecordingItem;
 import by.naxa.soundrecorder.listeners.HeadsetListener;
 import by.naxa.soundrecorder.listeners.OnSingleClickListener;
-import by.naxa.soundrecorder.util.AudioManagerCompat;
-import by.naxa.soundrecorder.util.EventBroadcaster;
-import by.naxa.soundrecorder.util.ScreenLock;
-import by.naxa.soundrecorder.util.TimeUtils;
+import by.naxa.soundrecorder.utils.util.AudioManagerCompat;
+import by.naxa.soundrecorder.utils.util.EventBroadcaster;
+import by.naxa.soundrecorder.utils.util.ScreenLock;
+import by.naxa.soundrecorder.utils.util.TimeUtils;
 import io.fabric.sdk.android.Fabric;
 
 import static android.media.AudioManager.ACTION_AUDIO_BECOMING_NOISY;

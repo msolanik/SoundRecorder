@@ -27,7 +27,7 @@ import androidx.viewpager.widget.ViewPager;
 import by.naxa.soundrecorder.R;
 import by.naxa.soundrecorder.fragments.FileViewerFragment;
 import by.naxa.soundrecorder.fragments.RecordFragment;
-import by.naxa.soundrecorder.util.EventBroadcaster;
+import by.naxa.soundrecorder.utils.util.EventBroadcaster;
 
 public class MainActivity extends AppCompatActivity {
 

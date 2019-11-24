@@ -1,4 +1,4 @@
-package by.naxa.soundrecorder.util;
+package by.naxa.soundrecorder.utils.util;
 
 import android.content.Context;
 import android.media.AudioAttributes;

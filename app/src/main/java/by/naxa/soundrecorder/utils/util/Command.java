@@ -1,4 +1,4 @@
-package by.naxa.soundrecorder.util;
+package by.naxa.soundrecorder.utils.util;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

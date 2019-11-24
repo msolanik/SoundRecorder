@@ -17,7 +17,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import by.naxa.soundrecorder.R;
 import by.naxa.soundrecorder.adapters.FileViewerAdapter;
-import by.naxa.soundrecorder.util.Paths;
+import by.naxa.soundrecorder.utils.util.Paths;
 
 /**
  * Created by Daniel on 12/23/2014.

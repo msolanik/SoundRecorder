@@ -35,12 +35,12 @@ import by.naxa.soundrecorder.R;
 import by.naxa.soundrecorder.RecorderState;
 import by.naxa.soundrecorder.listeners.OnSingleClickListener;
 import by.naxa.soundrecorder.services.RecordingService;
-import by.naxa.soundrecorder.util.Command;
-import by.naxa.soundrecorder.util.EventBroadcaster;
-import by.naxa.soundrecorder.util.MyIntentBuilder;
-import by.naxa.soundrecorder.util.Paths;
-import by.naxa.soundrecorder.util.PermissionsHelper;
-import by.naxa.soundrecorder.util.ScreenLock;
+import by.naxa.soundrecorder.utils.util.Command;
+import by.naxa.soundrecorder.utils.util.EventBroadcaster;
+import by.naxa.soundrecorder.utils.util.MyIntentBuilder;
+import by.naxa.soundrecorder.utils.util.Paths;
+import by.naxa.soundrecorder.utils.util.PermissionsHelper;
+import by.naxa.soundrecorder.utils.util.ScreenLock;
 
 /**
  * A simple {@link Fragment} subclass.

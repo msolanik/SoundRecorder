@@ -9,7 +9,7 @@ import androidx.annotation.Nullable;
 import by.naxa.soundrecorder.BuildConfig;
 import by.naxa.soundrecorder.R;
 import by.naxa.soundrecorder.activities.SettingsActivity;
-import by.naxa.soundrecorder.util.MySharedPreferences;
+import by.naxa.soundrecorder.utils.util.MySharedPreferences;
 
 /**
  * This fragment shows general preferences.
