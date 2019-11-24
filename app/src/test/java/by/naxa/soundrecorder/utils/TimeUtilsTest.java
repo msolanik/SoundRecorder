@@ -21,7 +21,7 @@ public class TimeUtilsTest {
     }
 
     @Test
-    public void formatDuration_hourInput() {
+    public void formatDurationTest_hourInput() {
         String time = TimeUtils.formatDuration(3600000);
         assertEquals("1:00:00", time);
     }
